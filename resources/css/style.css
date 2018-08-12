@@ -177,6 +177,45 @@ header .container {
 
 /*  Courses  */
 
+.courses {
+  background-color: lightgrey;
+}
+
+.courses h2 {
+  text-align: center;
+  padding: 2rem 0;
+  font-weight: bold;
+}
+
+.courses .container {
+  margin: 0 4.5rem;
+}
+
+.course-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+
+.course {
+  max-width: 32%;
+  margin-bottom: 2rem;
+}
+
+.course-image img {
+  max-width: 100%;
+}
+
+.course-text {
+  margin: 1rem 1rem 1.5rem 1rem;
+}
+
+.course-text h4 {
+  padding: 0.5rem 0;
+}
+
+
 
 
 
