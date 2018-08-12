@@ -3,15 +3,125 @@
 
 
 /*  Universal Styles  */
+html {
+  font-size: 16px;
+}
 
+body {
+  color: rgba(80, 80, 80, 1);
+}
 
+.container {
+  width: auto;
+  margin: auto 1.5rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
 
 /*  Header  */
 
+header .container {
+  display: flex;
+  height: 32px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  justify-content: space-between;
 
+}
+
+.logo {
+  height: 2rem;
+  margin: auto 0;
+  display: flex;
+}
+
+#colmar,
+#academy {
+  height: 1rem;
+  line-height: 2rem;
+}
+
+#colmar {
+  font-weight: bold;
+}
+
+#academy {
+  color: rgba(169, 169, 169, 1);
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.navigation ul {
+  display: inline-block;
+
+}
+
+.desktop-navigation li {
+  display: inline-block;
+  padding-left: 1rem;
+
+}
+
+.mobile-navigation {
+  display: none
+}
 
 /*  Jumbotron  */
 
+.jumbotron {
+    background-color: lightgrey;
+}
+
+.jumbotron .container {
+  display: flex;
+}
+
+.jumbotron .banner-image {
+  width: 60%;
+}
+
+.jumbotron .banner-image img {
+  max-width: 100%;
+  padding: 2rem 0;
+}
+
+.jumbotron .banner-text {
+  width: 40%;
+  padding: 3rem 2rem 3rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.jumbotron h1 {
+  padding-bottom: 1.5rem;
+}
+
+.jumbotron h3 {
+  padding-bottom: 1.5rem;
+}
+
+.jumbotron .banner-text button {
+  padding: 0.5rem;
+  font-weight: bold;
+  font-size: 1.25rem;
+  background-color: dimgrey;
+  color: white;
+}
 
 
 /*  Information  */
