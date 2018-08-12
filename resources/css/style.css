@@ -14,29 +14,46 @@ body {
 .container {
   width: auto;
   margin: auto 1.5rem;
+  display: flex;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
+  padding: 1.5rem 0;
 }
 
 h2 {
   font-size: 2rem;
+  //padding: 1rem 0;
 }
 
 h3 {
   font-size: 1.5rem;
+  //padding: 0.75rem 0;
+}
+
+h4 {
+  font-size: 1rem;
+  //padding: 0.5rem 0;
+}
+
+.left-hand-column {
+  max-width: 60%;
+  margin: 2rem 1.5rem 2rem 0rem;
+}
+
+.right-hand-column {
+  max-width: 40%;
+  margin-top: 2rem;
 }
 
 /*  Header  */
 
 header .container {
-  display: flex;
   height: 32px;
   margin-top: 1rem;
   margin-bottom: 1rem;
   justify-content: space-between;
-
 }
 
 .logo {
@@ -67,13 +84,11 @@ header .container {
 
 .navigation ul {
   display: inline-block;
-
 }
 
 .desktop-navigation li {
   display: inline-block;
   padding-left: 1rem;
-
 }
 
 .mobile-navigation {
@@ -86,20 +101,12 @@ header .container {
     background-color: lightgrey;
 }
 
-.jumbotron .container {
-  display: flex;
-}
 
-.jumbotron .banner-image {
-  width: 60%;
-}
-
-.jumbotron .banner-image img {
+.jumbotron .left-hand-column img {
   max-width: 100%;
-  padding: 2rem 0;
 }
 
-.jumbotron .banner-text {
+.jumbotron .right-hand-column {
   width: 40%;
   padding: 3rem 2rem 3rem 1.5rem;
   display: flex;
@@ -107,24 +114,64 @@ header .container {
   justify-content: center;
 }
 
-.jumbotron h1 {
-  padding-bottom: 1.5rem;
-}
 
-.jumbotron h3 {
-  padding-bottom: 1.5rem;
-}
-
-.jumbotron .banner-text button {
+.jumbotron .right-hand-column button {
   padding: 0.5rem;
   font-weight: bold;
   font-size: 1.25rem;
   background-color: dimgrey;
   color: white;
+  margin-top: 1rem;
 }
 
 
 /*  Information  */
+
+.information-section .left-hand-column img {
+  width: 100%;
+}
+
+.information-section .left-hand-column h2 {
+  margin-top: 2rem;
+}
+
+.information-section .left-hand-column p {
+  margin: 1.5rem 0;
+}
+
+.information-section .right-hand-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.information-section .right-hand-column .section {
+  display: flex;
+  align-items: center;
+}
+
+
+#guest-lecture {
+  background-color: lightgrey;
+}
+
+.information-section .image {
+  max-width: 35%;
+}
+
+.information-section .text {
+  max-width: 65%;
+  margin-left: 2rem;
+}
+
+.information-section .right-hand-column img {
+  max-width: 100%;
+  margin: 1rem;
+}
+
+
+.information-section .text p {
+  margin: 0.5rem 0;
+}
 
 
 
