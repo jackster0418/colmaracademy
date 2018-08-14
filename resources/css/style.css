@@ -12,39 +12,59 @@ body {
 }
 
 .container {
-  width: auto;
   margin: auto 1.5rem;
   display: flex;
 }
 
+p {
+  color: rgba(80, 80, 80, 1);
+}
+
+
+a {
+  color: rgba(192, 192, 192, 1);
+  text-shadow: 1px 1px rgba(48, 48, 48, 1);
+  transition: all 250ms ease-in 200ms;
+}
+
+a:hover {
+  color: rgba(0, 51, 153, 1);
+}
+
 h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   padding: 1.5rem 0;
+  color: rgba(255, 255, 255, 1);
 }
 
 h2 {
   font-size: 2rem;
-  //padding: 1rem 0;
 }
 
 h3 {
   font-size: 1.5rem;
-  //padding: 0.75rem 0;
 }
 
 h4 {
   font-size: 1rem;
-  //padding: 0.5rem 0;
+}
+
+h1,
+h2,
+h3 {
+  color: rgba(0, 51, 153, 1)
 }
 
 .left-hand-column {
   max-width: 60%;
   margin: 2rem 1.5rem 2rem 0rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .right-hand-column {
   max-width: 40%;
-  margin-top: 1rem;
+  margin: 1rem 0 2rem 0;
 }
 
 .container .section .image {
@@ -89,15 +109,93 @@ h4 {
 
 .container .left-hand-column p {
   margin: 1.5rem 0;
+
+}
+
+@media only screen and (min-width: 1650px) {
+  h1 {
+    font-size: 4rem:
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
+
+  a,
+  p,
+  span {
+    font-size: 1.15rem;
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  h1 {
+      font-size: 2.75rem;
+  }
+
+}
+
+@media only screen and (max-width: 880px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  h4,
+  p,
+  span {
+    font-size: 0.85rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .left-hand-column {
+    max-width: 100%;
+  }
+
+  .right-hand-column {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
 }
 
 /*  Header  */
 
+
+header {
+  //background-color: white;
+}
+
 header .container {
-  height: 32px;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  display: flex;
+  padding: 1rem 1.5rem;
   justify-content: space-between;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  z-index: 1;
+  background-color: white;
+  margin: 0;
+  border-bottom: 1.5px solid #000080;
 }
 
 .logo {
@@ -105,6 +203,7 @@ header .container {
   margin: auto 0;
   display: flex;
 }
+
 
 #colmar,
 #academy {
@@ -114,10 +213,11 @@ header .container {
 
 #colmar {
   font-weight: bold;
+  color: rgba(0, 51, 153, 1)
 }
 
 #academy {
-  color: rgba(169, 169, 169, 1);
+  color: rgba(192, 192, 192, 1);
 }
 
 .navigation {
@@ -126,23 +226,53 @@ header .container {
   justify-content: flex-end;
 }
 
-.navigation ul {
-  display: inline-block;
-}
-
 .desktop-navigation li {
   display: inline-block;
-  padding-left: 1rem;
+  padding: 0.5rem;
 }
 
 .mobile-navigation {
-  display: none
+  display: none;
 }
+
+@media only screen and (max-width: 600px) {
+
+  header .container {
+    height: 32px;
+  }
+
+  .navigation .desktop-navigation {
+    display: none;
+  }
+
+  .navigation {
+    display: block;
+    width: 100%;
+  }
+
+  .mobile-navigation {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .mobile-navigation li {
+    display: inline-block;
+    flex-direction: row;
+  }
+
+  header .logo {
+    display: none;
+  }
+}
+
+
 
 /*  Jumbotron  */
 
 .jumbotron {
-    background-color: lightgrey;
+    background-color: rgba(192, 192, 192, 1);
+    position: relative;
+    top: 4rem;
 }
 
 
@@ -159,50 +289,191 @@ header .container {
 }
 
 
-.jumbotron .right-hand-column button {
+.jumbotron .right-hand-column .btn {
   padding: 0.5rem;
   font-weight: bold;
   font-size: 1.25rem;
-  background-color: dimgrey;
+  background-color: rgba(0, 51, 153, 0.9);
   color: white;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
+  border-radius: 10px;
+  transition: all 200ms ease-in 200ms;
+  text-align: center;
 }
 
+.jumbotron .right-hand-column .btn:hover {
+  background-color: rgba(255, 255, 255, 1);
+  color: rgba(0, 51, 153, 0.9);
+
+}
+
+.jumbotron h3 {
+  color: rgba(255, 255, 255, 1);
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 768px) {
+  .jumbotron .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .jumbotron .right-hand-column {
+    text-align: center;
+    padding: 1rem;
+    width: auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  .jumbotron .container {
+    margin: 0px 0px;
+  }
+
+  .jumbotron .left-hand-column {
+    margin: 0px 0px;
+  }
+
+  .jumbotron .right-hand-column {
+    padding: 0px 0px;
+    margin: 0px 0px;
+  }
+
+  .jumbotron h1 {
+    padding: 2rem 0;
+  }
+
+  .jumbotron h3 {
+    padding-bottom: 1.5rem;
+  }
+
+  .jumbotron .right-hand-column .btn {
+    padding: 0px 0px;
+    margin: 0rem auto 2rem;
+    width: 60%
+  }
+
+}
 
 /*  Information  */
 
-.information-section .left-hand-column img {
-  //width: 100%;
+.information-section {
+  position: relative;
+  top: 4rem;
 }
 
-.information-section .left-hand-column h2 {
-  //margin-top: 2rem;
+.information-section .left-hand-column h4 {
+  align-items: flex-end;
+  font-weight: bold;
+  font-style: italic;
 }
-
-.information-section .left-hand-column p {
-  /margin: 1.5rem 0;
-}
-
 
 #guest-lecture {
-  background-color: lightgrey;
+  background: linear-gradient(rgba(0,51,153,1), rgba(255,255,255,1));
+  border: 1.5px solid rgba(0, 51, 153, 1);
 }
 
-.information-section .text p {
-  //margin: 0.5rem 0;
+#guest-lecture h3,
+#guest-lecture p {
+  color: rgba(255, 255, 255, 1);
 }
 
+.information-section .right-hand-column .mobile img {
+  display: none;
+}
 
+@media only screen and (max-width: 990px) {
+  .jumbotron h3 {
+    font-size: 1.25rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .information-section .container {
+    flex-direction: column;
+  }
+
+#orientation,
+#campus {
+  border: 1.5px solid rgba(0, 51, 153, 1);
+  margin-bottom: 0.25rem;
+}
+
+}
+
+@media only screen and (max-width: 600px) {
+  .information-section .left-hand-column {
+    display: none;
+  }
+
+  .information-section .section {
+    flex-direction: column;
+  }
+
+  .information-section .right-hand-column .desktop img {
+    display: none;
+  }
+
+  .information-section .right-hand-column .mobile img {
+    display: block;
+    margin: 0rem;
+  }
+
+  .information-section .container .section .image {
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .information-section .container .right-hand-column .section {
+    align-items: flex-start;
+  }
+
+  .information-section .container .section .text {
+    margin: 1rem;
+
+  }
+
+  .information-section .container .text p {
+    margin: 0.75rem 0;
+  }
+
+
+  #guest-lecture {
+    border: 0rem;
+    margin-bottom: 2rem;
+    background: none;
+  }
+
+  #guest-lecture h3 {
+    color: rgba(0, 51, 153, 1);
+  }
+
+  #guest-lecture p {
+    color: inherit;
+  }
+
+  #orientation,
+  #campus {
+    border: 0rem;
+    margin-bottom: 3rem;
+}
 
 /*  Courses  */
 
 .courses {
   background-color: lightgrey;
+  position: relative;
+  top: 4rem;
 }
 
 .courses h2 {
   text-align: center;
   padding: 2rem 0;
+  font-weight: bold;
+}
+
+.courses h4 {
   font-weight: bold;
 }
 
@@ -220,6 +491,14 @@ header .container {
 .course {
   max-width: 32%;
   margin-bottom: 2rem;
+  background-color: rgba(192, 195, 192, 1);
+  opacity: 0.75;
+  transition: all 250ms ease-in 200ms;
+}
+
+.course:hover {
+  opacity: 1;
+  box-shadow: 5px 5px 5px #888888;
 }
 
 .course-image img {
@@ -228,6 +507,7 @@ header .container {
 
 .course-text {
   margin: 1rem 1rem 1.5rem 1rem;
+
 }
 
 .course-text h4 {
@@ -241,6 +521,11 @@ header .container {
 
 /*  Thesis  */
 
+.thesis {
+  position: relative;
+  top: 4rem;
+}
+
 .thesis h2 {
   text-align: center;
   padding: 2rem 0 0;
@@ -251,15 +536,44 @@ header .container {
   max-width: 100%;
 }
 
+.thesis .right-hand-column {
+  margin-top: 2rem;
+}
+
+#fisma {
+  background: linear-gradient(rgba(0,51,153,1), rgba(255,255,255,1));
+  border: 1.5px solid rgba(0, 51, 153, 1);
+}
+
+#fisma h3,
+#fisma p {
+  color: rgba(255, 255, 255, 1);
+}
+
+@media only screen and (max-width: 768px) {
+ .thesis .container {
+   flex-direction: column;
+ }
 
 
+ #nowandthen {
+   border: 1.5px solid rgba(0, 51, 153, 1);
+   margin-top: 0.25rem;
+ }
+
+}
 
 /*  Footer  */
 
+footer {
+  position: relative;
+  top: 4rem;
+}
 
 footer .container {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 2rem;
 }
 
 footer .policy span {
