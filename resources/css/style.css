@@ -174,9 +174,7 @@ h4 {
   }
 }
 
-@media only screen and (max-width: 600px) {
 
-}
 
 /*  Header  */
 
@@ -373,6 +371,7 @@ header .container {
   align-items: flex-end;
   font-weight: bold;
   font-style: italic;
+  padding-top: 0.5rem;
 }
 
 #guest-lecture {
@@ -445,8 +444,10 @@ header .container {
   }
 
   .information-section .container .text p {
-    margin: 0.75rem 0;
+    margin: 0.75rem 0rem;
   }
+
+
 
 
   #guest-lecture {
@@ -515,7 +516,8 @@ header .container {
 }
 
 .course-image img {
-  max-width: 100%;
+  width: 100%;
+  justify-content: center;
 }
 
 .course-text {
