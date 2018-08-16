@@ -116,29 +116,29 @@ h4 {
 
 }
 
-@media only screen and (min-width: 1650px) {
+//@media only screen and (min-width: 1650px) {
   h1 {
-    font-size: 4rem:
+    //font-size: 4rem:
   }
 
   h2 {
-    font-size: 3rem;
+    //font-size: 3rem;
   }
 
   h3 {
-    font-size: 2rem;
+    //font-size: 2rem;
   }
 
   h4 {
-    font-size: 1.25rem;
+    //font-size: 1.25rem;
   }
 
   a,
   p,
   span {
-    font-size: 1.15rem;
+    //font-size: 1.15rem;
   }
-}
+}//
 
 @media only screen and (max-width: 1024px) {
   h1 {
@@ -196,6 +196,7 @@ header .container {
   margin: 0;
   border-bottom: 1.5px solid #000080;
 }
+
 
 .logo {
   height: 2rem;
@@ -274,17 +275,21 @@ header .container {
     top: 4rem;
 }
 
-
-.jumbotron .left-hand-column img {
-  max-width: 100%;
+.jumbotron .right-hand-column {
+  justify-content: center;
+  flex-grow: 1;
+}
+.jumbotron .left-hand-column {
+  flex-grow: 1;
 }
 
-.jumbotron .right-hand-column {
-  width: 40%;
-  padding: 3rem 2rem 3rem 1.5rem;
-  display: flex;
+.jumbotron h1,
+.jumbotron h3 {
+  padding-left: 1rem;
+}
+
+.jumbotron .section {
   flex-direction: column;
-  justify-content: center;
 }
 
 
@@ -294,10 +299,11 @@ header .container {
   font-size: 1.25rem;
   background-color: rgba(0, 51, 153, 0.9);
   color: white;
-  margin-top: 1.5rem;
+  margin: 1.5rem auto;
   border-radius: 10px;
   transition: all 200ms ease-in 200ms;
   text-align: center;
+  width: 60%;
 }
 
 .jumbotron .right-hand-column .btn:hover {
@@ -355,7 +361,6 @@ header .container {
   .jumbotron .right-hand-column .btn {
     padding: 0.5rem 0rem;
     margin: 0rem auto 2rem;
-    width: 60%
   }
 
 }
@@ -447,9 +452,6 @@ header .container {
     margin: 0.75rem 0rem;
   }
 
-
-
-
   #guest-lecture {
     border: 0rem;
     background: none;
@@ -467,7 +469,7 @@ header .container {
   #campus {
     border: 0rem;
     margin-bottom: 3rem;
-}
+  }
 }
 
 
@@ -640,6 +642,7 @@ footer .container {
   display: flex;
   justify-content: space-between;
   margin-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 
 footer .policy span {
