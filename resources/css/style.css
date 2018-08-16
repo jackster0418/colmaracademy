@@ -24,8 +24,8 @@ p {
 
 
 a {
-  color: rgba(192, 192, 192, 1);
-  text-shadow: 1px 1px rgba(48, 48, 48, 1);
+  color: rgba(166, 166, 166, 1);
+  //text-shadow: 1px 1px rgba(48, 48, 48, 1);
   transition: all 250ms ease-in 200ms;
 }
 
